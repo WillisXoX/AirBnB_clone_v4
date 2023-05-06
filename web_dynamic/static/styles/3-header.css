@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 header {
     width: 100%;
     height: 70px;
@@ -26,31 +25,3 @@ header #api_status.available{
     background-color: #ff545f;
 }
 
-=======
-@charset "UTF-8";
-/** Holberton Practice Styles
- * ------ Header
- */
-
-header {
-        background-color: #FFFFFF;
-	background-image: url("../images/logo.png");
-	background-repeat: no-repeat;
-	background-position: 20px 50%;
-	height: 70px;
-	width: 100%;
-	border-bottom: 1px solid #CCCCCC;
-}
-#api_status {
-        float: right;
-        width: 40px;
-        height: 40px;
-        border-radius: 100%;
-        background-color: #cccccc;
-        margin-right: 30px;
-	margin-top: 15px;
-}
-#api_status.available {
-        background-color: #ff545f;
-}
->>>>>>> 7935defc74ddedb01422bd63848c4da05a9eba93
