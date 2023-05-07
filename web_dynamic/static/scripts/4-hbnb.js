@@ -76,8 +76,35 @@ $(document).ready(() => {
         }
     });
 
+    // Get places by amineties
+    $('button').click(() => {
+        $.ajax({
+            url: places_search,
+            type: "POST",
+            data: JSON.stringify({"amenities": amenities_obj}),
+            dataType: "json",
+            contentType: "application/json"
+            })
+            .done((data) => {
+                // Get user from user_id
+                let data_size = Object.keys(data).length;
+                for (let i = 0; i < data_size; i++) {
+                    let user_api = 'http://127.0.0.1:5001/api/v1/users/' + data[i].user_id;
+                    $.ajax({
+                        url: user_api,
+                        dataType: 'json'
+                    }).done((user) => {
+                        data[i].first_name = user['first_name'];
+                        data[i].last_name = user['last_name'];
+                    });
+                }
+                $('.places').empty();
+                articles_data(data);
+        });
+    });
+
     function articles_data(place){
-        var places = $('.places');
+        let places = $('.places');
 
         let place_size = Object.keys(place).length;
         for (let i = 0; i < place_size; i++) {
