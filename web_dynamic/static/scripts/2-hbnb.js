@@ -34,7 +34,7 @@ $(document).ready(() => {
         });
     }
 
-    const status_api = 'http://127.0.0.1:5001/api/v1/status/';
+    const status_api = 'http://127.0.0.1:5002/api/v1/status/';
 
     $.ajax({
         url: status_api,
