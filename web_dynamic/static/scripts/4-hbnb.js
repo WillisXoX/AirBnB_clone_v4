@@ -38,7 +38,7 @@ $(document).ready(() => {
     }
 
     // Get all places from api
-    const places_search = 'http://127.0.0.1:5001/api/v1/places_search';
+    const places_search = 'http://schoolbnb.tech/api/v1/places_search';
 
     $.ajax({
         url: places_search,
@@ -51,7 +51,7 @@ $(document).ready(() => {
             // Get user from user_id
             let data_size = Object.keys(data).length;
             for (let i = 0; i < data_size; i++) {
-                let user_api = 'http://127.0.0.1:5001/api/v1/users/' + data[i].user_id;
+                let user_api = 'http://schoolbnb.tech/api/v1/users/' + data[i].user_id;
 
                 $.ajax({
                     url: user_api,
@@ -65,7 +65,7 @@ $(document).ready(() => {
     });
 
     // Get status from api
-    const status_api = 'http://127.0.0.1:5001/api/v1/status/';
+    const status_api = 'http://schoolbnb.tech/api/v1/status/';
     $.ajax({
         url: status_api,
         dataType: 'json'
@@ -89,7 +89,7 @@ $(document).ready(() => {
                 // Get user from user_id
                 let data_size = Object.keys(data).length;
                 for (let i = 0; i < data_size; i++) {
-                    let user_api = 'http://127.0.0.1:5001/api/v1/users/' + data[i].user_id;
+                    let user_api = 'http://schoolbnb.tech/api/v1/users/' + data[i].user_id;
                     $.ajax({
                         url: user_api,
                         dataType: 'json'
