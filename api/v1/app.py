@@ -1,5 +1,14 @@
 #!/usr/bin/python3
 """ Flask Application """
+from os import environ
+environ['HBNB_MYSQL_USER']   = 'hbnb_dev'
+environ['HBNB_MYSQL_PWD']    = 'hbnb_dev_pwd'
+environ['HBNB_MYSQL_HOST']   = 'localhost'
+environ['HBNB_MYSQL_DB']     = 'hbnb_dev_db'
+environ['HBNB_TYPE_STORAGE'] = 'db'
+environ['HBNB_API_HOST']     = '0.0.0.0'
+environ['HBNB_API_PORT']     = '5001'
+
 from models import storage
 from api.v1.views import app_views
 from os import environ
